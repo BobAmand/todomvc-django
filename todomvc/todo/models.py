@@ -4,6 +4,6 @@ from django.db import models
 
 
 class Todo(models.Model):
-    name = models.CharField(max_length=100)
-    # phone = models.CharField(max_length=100)
-    # email = models.EmailField()
+    title = models.CharField(max_length=100)
+    completed = models.BooleanField()
+    order = models.IntegerField()
