@@ -1,7 +1,7 @@
 from rest_framework import serializers
-from .models import Contact
+from .models import Todo
 
 
-class ContactSerializer(serializers.HyperlinkedModelSerializer):
+class TodoSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
-        model = Contact
+        model = Todo
