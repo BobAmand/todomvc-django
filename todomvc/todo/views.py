@@ -7,5 +7,5 @@ from .serializers import TodoSerializer
 
 
 class TodoViewSet(viewsets.ModelViewSet):
-    queryset = Todo.objects.all()
-    serializer_class = TodoSerializer
+    queryset = Todo.objects.all()     # works on all objects.
+    serializer_class = TodoSerializer  # turns it into json data.

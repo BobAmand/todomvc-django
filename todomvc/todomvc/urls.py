@@ -19,11 +19,12 @@ from django.contrib import admin
 from rest_framework import routers
 from todo.views import TodoViewSet
 
-router = routers.DefaultRouter()
-router.register(r'todo', TodoViewSet)
+router = routers.DefaultRouter()   # builds a set of urls
+router.register(r'todo', TodoViewSet)   # one here but could be many.
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^api/', include(router.urls)),
+    url(r'^api/', include(router.urls)),     # will result in api/todo
+    url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework')),  # noqa
     # url(r'^$', TemplateView.as_view(template_name="index.html")),
 ]

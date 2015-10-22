@@ -4,6 +4,7 @@ from django.db import models
 
 
 class Todo(models.Model):
-    title = models.CharField(max_length=100)
-    completed = models.BooleanField()
-    order = models.IntegerField(max_length=4)
+    # id is automatically included.
+    task = models.CharField(max_length=100)
+    done = models.BooleanField()
+    order = models.IntegerField()
